@@ -95,8 +95,9 @@ span{
 }
 
 .container .calculator span:hover{
-    /* transition: 0.5s; */
+    transition: 0.2s;
     background-color: rgba(255,255,255,0.05);
+    font-size: 25px;
 }
 .container .calculator span:active{
     transition: 0.02s;
