@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',monospace;
+    border: none;
+}
+
+body{
+    position: relative;
+    background-color: #161623;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(63, 38, 255),rgb(0, 255, 234));
+    top: 0;
+    right: 0;
+    clip-path: circle(22% at 30% 20%);
+}
+body::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ff2aca,#691ee9);
+    top: 0;
+    right: 0;
+    clip-path: circle(20% at 70% 70%);
+}
+
+.container{
+    z-index: 1000;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.);
+    overflow: hidden;
+    box-shadow: 5px 10px 20px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    
+}
+.container .calculator{
+    position: relative;
+    display: grid;
+    /* box-shadow: 5px 10px 10px 20px rgba(0, 0, 0, 0.9); */
+}
+.container .calculator .value{
+    grid-column: span 4;
+    height: 150px;
+    width: 400px;
+    text-align: right;
+    padding: 20px;
+    font-size: 30px;
+    background: transparent;
+    color: white;
+}
+
+input{
+    outline:none;
+}
+
+.container .calculator .num{
+    color: white;
+    /* height: 50px; */
+    text-align: center;
+}
+
+span{
+    position: relative;
+    cursor: pointer;;
+}
+
+.container .calculator span{
+    background-color: rgba(255,255,255,0.01);
+    display: grid;
+    place-items: center;
+    width: 100px;
+    height: 100px;
+    font-weight: 400;
+    font-size: 20px;
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    
+}
+
+.container .calculator span:hover{
+    /* transition: 0.5s; */
+    background-color: rgba(255,255,255,0.05);
+}
+.container .calculator span:active{
+    transition: 0.02s;
+    color: #000082;
+    background-color: #14ff47;
+}
+
+.container .calculator .clear{
+    grid-column: span 2;
+    width: 200px;
+}
+
+.container .calculator .plus{
+    grid-row: span 2;
+    height: 200px;
+}

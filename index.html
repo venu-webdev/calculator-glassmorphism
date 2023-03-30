@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Calci</title>
+</head>
+<body>
+    <div class="container">
+           <form class="calculator" name="calci">
+            <input type="text" readonly class="value" name="txt"/>
+            <span type="text" class="num clear"  onclick="document.calci.txt.value=''" >c</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='/'">/</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='*'" >*</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='7'" >7</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='8'" >8</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='9'" >9</span>
+            <span type="text" class="num minus"  onclick="document.calci.txt.value +='-'" >-</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='4'" >4</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='5'" >5</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='6'" >6</span>
+            <span type="text" class="num plus"  onclick="document.calci.txt.value +='+'" >+</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='1'" >1</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='2'" >2</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='3'" >3</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='0'" >0</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='00'" >00</span> 
+            <span type="text" class="num"  onclick="document.calci.txt.value +='.'" >.</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value =eval(document.calci.txt.value)">=</span>
+
+           </form>
+    </div>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".container"), {
+		max: 25,
+		speed: 800,
+        glare: true,
+        "max-glare":.3,
+	}); 
+    </script>
+</body>
+</html>
