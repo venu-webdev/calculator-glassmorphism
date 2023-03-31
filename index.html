@@ -12,23 +12,23 @@
     <div class="container">
            <form class="calculator" name="calci">
             <input type="text" readonly class="value" name="txt"/>
-            <span type="text" class="num clear"  onclick="document.calci.txt.value=''" >c</span>
+            <span type="text" class="num clear"  onclick="document.calci.txt.value=''" >c</span> 
+            <span type="text" class="num del"  onclick="document.calci.txt.value=document.calci.txt.value.slice(0,-1);" >del</span> 
             <span type="text" class="num"  onclick="document.calci.txt.value +='/'">/</span>
-            <span type="text" class="num"  onclick="document.calci.txt.value +='*'" >*</span>
             <span type="text" class="num"  onclick="document.calci.txt.value +='7'" >7</span>
             <span type="text" class="num"  onclick="document.calci.txt.value +='8'" >8</span>
             <span type="text" class="num"  onclick="document.calci.txt.value +='9'" >9</span>
-            <span type="text" class="num minus"  onclick="document.calci.txt.value +='-'" >-</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='*'" >*</span>
             <span type="text" class="num"  onclick="document.calci.txt.value +='4'" >4</span>
             <span type="text" class="num"  onclick="document.calci.txt.value +='5'" >5</span>
             <span type="text" class="num"  onclick="document.calci.txt.value +='6'" >6</span>
-            <span type="text" class="num plus"  onclick="document.calci.txt.value +='+'" >+</span>
+            <span type="text" class="num minus"  onclick="document.calci.txt.value +='-'" >-</span>
             <span type="text" class="num"  onclick="document.calci.txt.value +='1'" >1</span>
             <span type="text" class="num"  onclick="document.calci.txt.value +='2'" >2</span>
             <span type="text" class="num"  onclick="document.calci.txt.value +='3'" >3</span>
-            <span type="text" class="num"  onclick="document.calci.txt.value +='0'" >0</span>
-            <span type="text" class="num"  onclick="document.calci.txt.value +='00'" >00</span> 
+            <span type="text" class="num plus"  onclick="document.calci.txt.value +='+'" >+</span>
             <span type="text" class="num"  onclick="document.calci.txt.value +='.'" >.</span>
+            <span type="text" class="num"  onclick="document.calci.txt.value +='0'" >0</span>
             <span type="text" class="num"  onclick="document.calci.txt.value =eval(document.calci.txt.value)">=</span>
 
            </form>
